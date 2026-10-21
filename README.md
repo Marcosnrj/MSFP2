@@ -3,7 +3,7 @@
 # Práctica 2: Modelado y control del sistema cardiovascular mediante el modelo Windkessel
 
 ## Información de la estudiante
-Nombre completo [correo@tijuana.tecnm.mx]
+Nombre completo: Marcos Ancelmo Naranjo Rivera [L23212218@tijuana.tecnm.mx]
 
 Modelado de Sistemas Fisiológicos
 
