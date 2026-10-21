@@ -26,10 +26,10 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 2. Obtener las funciones de transferencia de los modelos normotenso, hipertenso e hipotenso.
 3. Analizar la estabilidad en lazo abierto de cada caso mediante la localización de sus polos y determinar el error en estado estacionario.
 4. Determinar el modelo de ecuaciones integro diferenciales del circuito.
-5. Implementar los modelos en MATLAB/Simulink, representar las funciones de transferencia, el modelo de ecuaciones integro diferenciales, el circuito eléctrico normotenso mediante Simscape y el modelo de EDOs en el cuaderno computacional de MATLAB.
+5. Implementar los modelos en MATLAB/Simulink, representar las funciones de transferencia, el modelo de ecuaciones integro diferenciales, el circuito eléctrico normotenso mediante Simscape y el modelo de EDOs.
 6. Simular la respuesta del modelo normotenso a una señal aleatoria y utilizar su salida como entrada de los modelos hipertenso e hipotenso sin controlador para comparar las respuestas de los tres individuos.
-7. Diseñar y sintonizar dos controladores PID independientes para reducir las diferencias de los casos hipertenso e hipotenso respecto a la respuesta normotensa.
-8. Comparar, para cada caso, la respuesta normotensa, la respuesta sin controlador y la respuesta con PID, considerando el seguimiento de la referencia, el error y el comportamiento transitorio.
+7. Diseñar y sintonizar dos controladores PID para reducir las diferencias de los casos hipertenso e hipotenso respecto a la respuesta normotensa.
+8. Comparar, para cada caso, la respuesta normotensa, la respuesta sin controlador y la respuesta con PID.
 9. Implementar las funciones de transferencia y los sistemas controlados en Python mediante Visual Studio Code y comparar sus resultados con los obtenidos en MATLAB.
 10. Elaborar un diagrama en BioRender que relacione los componentes del modelo con las estructuras cardiovasculares y documentar los análisis, las simulaciones y los parámetros de los controladores en el repositorio.
 
@@ -39,7 +39,7 @@ En esta práctica se estudia el modelo Windkessel de cuatro elementos para repre
 
 Se analizan los casos normotenso, hipertenso e hipotenso manteniendo constantes Z, L y R y modificando C a 1.5, 1.0 y 3.5 ml/mmHg, respectivamente. Estos valores representan diferentes capacidades de distensión y almacenamiento de volumen arterial. El análisis matemático comprende la función de transferencia del circuito, la estabilidad en lazo abierto de cada caso, el error en estado estacionario y, posteriormente, el modelo de ecuaciones integrodiferenciales.
 
-En Simulink se implementa el circuito normotenso mediante la función de transferencia, modelo d ecuaciones integro diferenciales y circuito eléctrico y se aplica una señal aleatoria entre −0.2 y 1, con semilla 106, muestreo de 0.1 s y duración de 15 s. La salida normotensa se utiliza como entrada de los modelos hipertenso e hipotenso sin controlador y como referencia de dos lazos de control independientes. En cada lazo, un PID compara la referencia con la salida del caso correspondiente y genera la entrada del modelo a partir del error. Las ganancias se sintonizan por separado para mejorar el seguimiento de la respuesta normotensa.
+En Simulink se implementa el circuito normotenso mediante la función de transferencia, modelo de ecuaciones integro diferenciales y circuito eléctrico y se aplica una señal aleatoria entre −0.2 y 1, con semilla 106, muestreo de 0.1 s y duración de 15 s. La salida normotensa se utiliza como entrada de los modelos hipertenso e hipotenso sin controlador y como referencia de dos lazos de control independientes. En cada lazo, un PID compara la referencia con la salida del caso correspondiente y genera la entrada del modelo a partir del error. Las ganancias se sintonizan por separado para mejorar el seguimiento de la respuesta normotensa.
 
 El cuaderno computacional de MATLAB incluye las funciones de transferencia y el modelo de EDOs, trabajado únicamente en MATLAB; en Python se implementan las funciones de transferencia y los sistemas controlados. Las gráficas de Individuos comparan las respuestas normotensa, hipertensa e hipotensa sin controlador, mientras que las de Hipertenso e Hipotenso muestran la referencia normotensa, el caso sin controlador y su respuesta con PID. MATLAB incluye además la gráfica Individuos EDOs, dando un total de cuatro gráficas en MATLAB y tres en Python. Estas permiten comparar las implementaciones y evaluar el comportamiento transitorio y el efecto del control. Finalmente, el diagrama de BioRender relaciona los componentes del circuito con las estructuras y propiedades cardiovasculares que representan.
 
@@ -50,10 +50,11 @@ Palabras clave: Modelo Windkessel; Sistema cardiovascular; Controlador PID; Mode
 2. Cuaderno computacional de MATLAB [.mlx y .pdf].
 3. Imágenes con los parámetros de los controladores hipertenso e hipotenso.
 4. Análisis matemático: función de transferencia del circuito, estabilidad en lazo abierto de cada caso, error en estado estacionario y modelo de ecuaciones integro diferenciales.
-5. Archivo de la señal de entrada [signa.xlsx].
+5. Archivo de la señal de entrada [.xlsx].
 6. Código de Python [.py].
 7. Imágenes de las simulaciones en Python (3): Individuos, Hipertenso e Hipotenso.
 8. Imágenes de las simulaciones en MATLAB (4): Individuos, Individuos EDOs, Hipertenso e Hipotenso.
+9. Modelo en simulink [.slx]
 ## Referencias
 \[1] P. A. Valle, Syllabus para Modelado de Sistemas Fisiológicos, Tecnológico Nacional de México / Instituto Tecnológico de Tijuana, Tijuana, B.C., México, 2025. Permalink: https://biomath.xyz/course/
 
